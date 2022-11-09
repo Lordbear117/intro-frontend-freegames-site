@@ -19,7 +19,7 @@ const Home = () => {
     error,
   } = useFetch(`${process.env.REACT_APP_API_URL}/games`);
 
-  const debouncedSearchTerm = useDebounce(searchTerm, 500);
+  const debouncedSearchTerm = useDebounce(searchTerm, 2000);
 
   const currentYear = new Date().getFullYear();
 
