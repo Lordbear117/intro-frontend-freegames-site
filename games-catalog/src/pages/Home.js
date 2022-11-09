@@ -38,10 +38,10 @@ const Home = () => {
       <section>
         <div className="text-center">
           <h1 className="title">
-            Best Free to Play Games for PC and Browser in {currentYear}!
+            Mejores juegos Free-to-Play de {currentYear}!
           </h1>
           <p className="text-muted subtitle">
-            {allGames && allGames.length} free-to-play games found in our list!
+            {allGames && allGames.length} juegos Free-to-Play en la lista
           </p>
         </div>
         <form className={styles.form}>
@@ -50,13 +50,13 @@ const Home = () => {
             <input
               onChange={(e) => setSearchTerm(e.target.value)}
               type="search"
-              placeholder="Search for games"
+              placeholder="Buscar Juego"
               className={styles.input}
             />
           </label>
         </form>
         {debouncedSearchTerm && filteredGames.length === 0 && (
-          <p className="text-center">Sorry, no games found :(</p>
+          <p className="text-center">No se encontraron juegos :(</p>
         )}
       </section>
 
