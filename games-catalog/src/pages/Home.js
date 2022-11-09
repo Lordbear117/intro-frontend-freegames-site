@@ -13,11 +13,7 @@ const Home = () => {
   const [filteredGames, setFilteredGames] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const {
-    data: allGames,
-    isPending,
-    error,
-  } = useFetch(`${process.env.REACT_APP_API_URL}/games`);
+  const { data: allGames, isPending, error} = useFetch(`${process.env.REACT_APP_API_URL}/games`);
 
   const debouncedSearchTerm = useDebounce(searchTerm, 2000);
 
