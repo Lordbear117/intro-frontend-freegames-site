@@ -21,7 +21,7 @@ const Header = () => {
                 to="/"
                 style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
-                Home
+                Inicio
               </NavLink>
             </li>
             <li>
@@ -30,14 +30,6 @@ const Header = () => {
                 style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
                 Popular
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="favorites"
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
-              >
-                Favorites
               </NavLink>
             </li>
           </ul>
