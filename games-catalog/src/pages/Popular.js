@@ -17,7 +17,7 @@ const Popular = () => {
 
   const { data, isPending, error } = useFetch(url);
   const currentYear = new Date().getFullYear();
-  const currentMonth = Intl.DateTimeFormat("en-US", { month: "long" }).format(
+  const currentMonth = Intl.DateTimeFormat("es-Mx", { month: "long" }).format(
     new Date()
   );
 
@@ -37,21 +37,21 @@ const Popular = () => {
   return (
     <section className={styles.popular}>
       <h1 className="title">
-        Top 10 Free{" "}
+        Top 10 Juegos{" "}
         <span className={styles.lead}>
-          {selectedCategory ? selectedCategory : "To Play"}
+          {selectedCategory ? selectedCategory : ""}
         </span>{" "}
-        Games for PC and Browser in {currentMonth} {currentYear}
+        Free-To-Play en {currentMonth} de {currentYear}
       </h1>
 
       <div className={styles.filter}>
-        <label htmlFor="category">More Top 10's:</label>
+        <label htmlFor="category">Top 10:</label>
         <select
           defaultValue="Select Category"
           id="category"
           onChange={(e) => setSelectedCategory(e.target.value)}
         >
-          <option disabled>Select Category</option>
+          <option disabled>Seleccionar categoria</option>
           {categories.map((category) => (
             <option key={category} value={category}>
               Top {category}
