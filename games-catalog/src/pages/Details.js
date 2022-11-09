@@ -1,9 +1,7 @@
-import { useContext } from "react";
 import { useParams } from "react-router";
-import { AiFillHeart, AiFillWindows } from "react-icons/ai";
+import { AiFillWindows } from "react-icons/ai";
 import { GoBrowser } from "react-icons/go";
 import { useFetch } from "../hooks/useFetch";
-import { FavoritesContext } from "../context/FavoritesContext";
 
 // styles
 import styles from "./Details.module.css";
@@ -19,8 +17,6 @@ const Details = () => {
   } = useFetch(`${process.env.REACT_APP_API_URL}/game?id=${id}`, {
     id,
   });
-
-  const { gameIsFavorite, addToFavorite } = useContext(FavoritesContext);
 
   return (
     <section className={styles.game_details}>
@@ -113,21 +109,6 @@ const Details = () => {
               </li>
             </ul>
           )}
-
-          <button
-            onClick={() => addToFavorite(game)}
-            className={`btn ${styles.btn_favorite}`}
-            title={
-              gameIsFavorite(game.id)
-                ? "Remove from favorites"
-                : "Add to favorites"
-            }
-          >
-            <AiFillHeart
-              className={styles.heart_icon}
-              color={gameIsFavorite(game.id) ? "#ff0000" : "#fff"}
-            />
-          </button>
         </article>
       )}
     </section>

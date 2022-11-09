@@ -1,14 +1,10 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AiFillWindows, AiFillHeart } from "react-icons/ai";
+import { AiFillWindows } from "react-icons/ai";
 import { GoBrowser } from "react-icons/go";
 // styles
 import styles from "./GameItem.module.css";
 
-import { FavoritesContext } from "../../context/FavoritesContext";
-
 const GameItem = ({ item: game }) => {
-  const { addToFavorite, gameIsFavorite } = useContext(FavoritesContext);
 
   return (
     <div className={styles.card}>
@@ -42,6 +38,7 @@ const GameItem = ({ item: game }) => {
       </div>
     </div>
   );
+
 };
 
 export default GameItem;
