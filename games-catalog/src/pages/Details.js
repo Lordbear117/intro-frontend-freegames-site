@@ -29,37 +29,37 @@ const Details = () => {
             src={game.thumbnail}
             alt={game.title}
           />
-          <h1 className={styles.title}>About {game.title}</h1>
+          <h1 className={styles.title}>Sobre {game.title}</h1>
           {game.description.split(/(\r\n|\r|\n)/gi).map((paragraph, idx) => (
             <p key={idx} style={{ margin: "20px 0", fontSize: "15px" }}>
               {paragraph}
             </p>
           ))}
 
-          <h3>Additional Information</h3>
+          <h3>Informacion adicional</h3>
           <ul className={styles.info_list}>
             <li>
-              <span className="text-muted">Title</span>
+              <span className="text-muted">Titulo</span>
               <p>{game.title}</p>
             </li>
             <li>
-              <span className="text-muted">Developer</span>
+              <span className="text-muted">Desarrollador</span>
               <p>{game.developer}</p>
             </li>
             <li>
-              <span className="text-muted">Publisher</span>
+              <span className="text-muted">Publicado por</span>
               <p>{game.publisher}</p>
             </li>
             <li>
-              <span className="text-muted">Release Date</span>
+              <span className="text-muted">Fecha de lanzamiento</span>
               <p>{game.release_date}</p>
             </li>
             <li>
-              <span className="text-muted">Genre</span>
+              <span className="text-muted">Genero</span>
               <p>{game.genre}</p>
             </li>
             <li>
-              <span className="text-muted">Platform</span>
+              <span className="text-muted">Plataforma</span>
               <div className={styles.platform}>
                 {game.platform === "Windows" ? (
                   <AiFillWindows className={styles.platform_icon} />
@@ -71,7 +71,7 @@ const Details = () => {
             </li>
           </ul>
 
-          {game?.screenshots && <h3>{game.title} Screenshots</h3>}
+          {game?.screenshots && <h3>Capturas de pantalla {game.title}</h3>}
           {game?.screenshots && (
             <div className={styles.screenshot_grid}>
               {game?.screenshots?.map(({ image }) => (
@@ -83,28 +83,28 @@ const Details = () => {
           )}
 
           {game?.minimum_system_requirements && (
-            <h3>Minimum System Requirements (Windows)</h3>
+            <h3>Requisitos minimos (Windows)</h3>
           )}
           {game?.minimum_system_requirements && (
             <ul className={styles.info_list}>
               <li>
-                <span className="text-muted">OS</span>
+                <span className="text-muted">Sistema operativo</span>
                 <p>{game.minimum_system_requirements.os}</p>
               </li>
               <li>
-                <span className="text-muted">Processor</span>
+                <span className="text-muted">Procesador</span>
                 <p>{game.minimum_system_requirements.processor}</p>
               </li>
               <li>
-                <span className="text-muted">Memory</span>
+                <span className="text-muted">Memoria</span>
                 <p>{game.minimum_system_requirements.memory}</p>
               </li>
               <li>
-                <span className="text-muted">Graphics</span>
+                <span className="text-muted">Graficos</span>
                 <p>{game.minimum_system_requirements.graphics}</p>
               </li>
               <li>
-                <span className="text-muted">Storage</span>
+                <span className="text-muted">Almacenamiento</span>
                 <p>{game.minimum_system_requirements.storage}</p>
               </li>
             </ul>
