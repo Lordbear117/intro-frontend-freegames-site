@@ -6,9 +6,9 @@ Game Catalog es un sitio web que muestra una serie de videojuegos "free-to-play"
 
 #####Algunas características son:
 
-- ######Creado con [Create React App](https://reactjs.org/docs/create-a-new-react-app.html "Heading link")
-- ######[Material MUI](https://mui.com/ "Heading link")
--  ######React Single-Page App
+- ###### Creado con [Create React App](https://reactjs.org/docs/create-a-new-react-app.html "Heading link")
+- ###### [Material MUI](https://mui.com/ "Heading link")
+-  ###### React Single-Page App
 - ###### Uso de API´s
 
 
