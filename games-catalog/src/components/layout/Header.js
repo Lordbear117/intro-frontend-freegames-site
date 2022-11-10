@@ -12,7 +12,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={`${styles.container} container`}>
         <NavLink to="/">
-          <IoGameController className={styles.logo} />
+          <IoGameController className={styles.logo} />    
         </NavLink>
         <nav className={styles.navigation}>
           <ul>
