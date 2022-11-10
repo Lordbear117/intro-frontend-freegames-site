@@ -1,6 +1,6 @@
 # DEV.F Proyecto para Professional en Coding - Kata Frontend
 
-##CATALOGO DE VIDEOJUEGOS FREE-TO-PLAY CON REACT
+## CATALOGO DE VIDEOJUEGOS FREE-TO-PLAY CON REACT
 
 Game Catalog es un sitio web que muestra una serie de videojuegos "free-to-play" para encontrar nuevas opciones para divertirse.
 
