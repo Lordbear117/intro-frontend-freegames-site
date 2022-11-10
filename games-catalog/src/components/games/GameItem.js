@@ -19,7 +19,7 @@ const GameItem = ({ item: game }) => {
             component="img"
             height="150"
             image={game.thumbnail}
-            alt="green iguana"
+            alt="game image"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">

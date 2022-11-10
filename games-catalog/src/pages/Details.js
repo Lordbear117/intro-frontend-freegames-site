@@ -10,11 +10,7 @@ import Spinner from "../components/ui/Spinner";
 
 const Details = () => {
   const { id } = useParams();
-  const {
-    data: game,
-    isPending,
-    error,
-  } = useFetch(`${process.env.REACT_APP_API_URL}/game?id=${id}`, {
+  const { data: game, isPending, error,} = useFetch(`${process.env.REACT_APP_API_URL}/game?id=${id}`, {
     id,
   });
 
@@ -36,7 +32,7 @@ const Details = () => {
             </p>
           ))}
 
-          <h3>Informacion adicional</h3>
+          <h3>Información adicional</h3>
           <ul className={styles.info_list}>
             <li>
               <span className="text-muted">Titulo</span>

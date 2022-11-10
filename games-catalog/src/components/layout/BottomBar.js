@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { IoGameController, IoTrendingUp, IoHeart } from "react-icons/io5";
+import { IoGameController, IoTrendingUp } from "react-icons/io5";
 
 // styles
 import styles from "./BottomBar.module.css";
@@ -28,15 +28,6 @@ const BottomBar = () => {
           >
             <IoTrendingUp className={styles.icon} />
             <span>Popular</span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/favorites"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
-          >
-            <IoHeart className={styles.icon} />
-            <span>Favorites</span>
           </NavLink>
         </li>
       </ul>

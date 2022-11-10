@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 
+// Function to fetch data from FREETOPLAYGAMES API using provided Rapidapi key and host.
 export const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const controller = new AbortController();
-    const { signal } = controller;
 
     setData(null);
     setIsPending(true);
@@ -16,7 +15,6 @@ export const useFetch = (url) => {
     const fetchData = async () => {
       try {
         const response = await fetch(url, {
-          signal,
           headers: {
             "x-rapidapi-host": process.env.REACT_APP_API_HOST,
             "x-rapidapi-key": process.env.REACT_APP_API_KEY,
@@ -44,7 +42,6 @@ export const useFetch = (url) => {
 
     fetchData();
 
-    return () => controller.abort();
   }, [url]);
 
   return { data, isPending, error };
