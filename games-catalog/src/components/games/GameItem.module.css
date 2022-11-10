@@ -89,12 +89,3 @@
   border: none;
   cursor: pointer;
 }
-
-.heart_icon {
-  color: #aaaaaa;
-  font-size: 2rem;
-}
-
-.heart_icon:hover {
-  color: #fff;
-}
